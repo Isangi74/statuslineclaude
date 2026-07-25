@@ -1,0 +1,24 @@
+# Linting configuration for statuslineclaude.
+#
+# Declared explicitly (rather than relying on defaults) so that CI and local
+# runs agree, and so ruff does not inherit settings from a parent directory.
+
+target-version = "py39"
+line-length = 100
+
+[lint]
+select = [
+    "E",      # pycodestyle errors
+    "F",      # pyflakes
+    "W",      # pycodestyle warnings
+    "I",      # import sorting
+    "UP",     # pyupgrade
+    "B",      # bugbear
+    "SIM",    # simplify
+    "C4",     # comprehensions
+    "RUF",    # ruff-specific
+]
+
+[lint.per-file-ignores]
+# Tests load the scripts by path, so the import is not at the top of the file.
+"tests/*" = ["E402"]

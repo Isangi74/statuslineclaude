@@ -1,4 +1,21 @@
-node_modules/
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local
 .env
 *.log
-.DS_Store
+
+# Claude Code per-machine settings (never belongs in the repo)
+.claude/settings.local.json
