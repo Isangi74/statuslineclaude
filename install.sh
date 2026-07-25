@@ -9,7 +9,8 @@
 #   ./install.sh --dry-run    show what would change
 set -eu
 
-DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+# Redirecting cd keeps CDPATH from echoing the directory into the result.
+DIR=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
 
 for candidate in python3 python; do
   if command -v "$candidate" >/dev/null 2>&1; then
