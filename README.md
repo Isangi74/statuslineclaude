@@ -18,7 +18,7 @@ No dependencies beyond Python itself. One command to install, one to
 remove.
 
 > 💡 The design of this status line is based on **an original idea by
-> Mario Álvarez**.
+> "some1 don't wanna be mentioned here*.
 
 **📖 [Español](#español) · [English](#english)**
 
